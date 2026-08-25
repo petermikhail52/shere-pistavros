@@ -1,0 +1,654 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-25T04:23:37.858Z",
+  "denied": [
+    {
+      "id": "bartholomew-6",
+      "label": "St. Bartholomew",
+      "tradition": "Orthodox",
+      "path": "/icon-review/bartholomew/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St_Bartholomew,_(now_St_Nectarios),_Battersea_-_Icon_-_geograph.org.uk_-_3708898.jpg",
+      "qualityScore": 33,
+      "deniedAt": "2026-08-25T04:17:46.320Z"
+    },
+    {
+      "id": "bartholomew-8",
+      "label": "St. Bartholomew",
+      "tradition": "Orthodox",
+      "path": "/icon-review/bartholomew/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dup%C3%A9rac_Vestigi_G.B._de_Rossi_1639_Titlepage.jpg",
+      "qualityScore": 19,
+      "deniedAt": "2026-08-25T04:17:47.446Z"
+    },
+    {
+      "id": "sophia-1",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sofia_Saint_Sofia_Church_Icon_01.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:17:53.318Z"
+    },
+    {
+      "id": "sophia-3",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Icon_of_Passion_of_Jesus_Christ,_Novgorod.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:17:54.271Z"
+    },
+    {
+      "id": "sophia-4",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saints_Athanasios_of_Athos,_Varlaam,_and_Joasaph._Icon._Novgorod._24_x_19._From_Saint_Sophia_Cathedral._Novgorod_Museum.jpg",
+      "qualityScore": 34,
+      "deniedAt": "2026-08-25T04:17:55.606Z"
+    },
+    {
+      "id": "sophia-5",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ancient_icon_of_sts_peter_%26_paul.jpg",
+      "qualityScore": 25,
+      "deniedAt": "2026-08-25T04:17:58.126Z"
+    },
+    {
+      "id": "sophia-6",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Icon_of_Our_Saviour_of_the_Golden_robes._Novgorod_icon-painting_school,_XI_century,_Veliky_Novgorod,_Russia.jpg",
+      "qualityScore": 20,
+      "deniedAt": "2026-08-25T04:18:00.030Z"
+    },
+    {
+      "id": "sophia-7",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Christ_Pantokrator_Icon_from_Saint_Sofia_Church_in_Thessaloniki_End_of_14_Century.jpg",
+      "qualityScore": 20,
+      "deniedAt": "2026-08-25T04:18:00.895Z"
+    },
+    {
+      "id": "sophia-8",
+      "label": "Saint Sophia",
+      "tradition": "Orthodox",
+      "path": "/icon-review/sophia/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boris_Godunov%27s_family_icon_(before_1589,_Pskov_museum).jpg",
+      "qualityScore": 16,
+      "deniedAt": "2026-08-25T04:18:01.720Z"
+    },
+    {
+      "id": "gregory-3",
+      "label": "St. Gregory",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gregory/03-orthodox.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:StGregoryPalamasKiot.png",
+      "qualityScore": 36,
+      "deniedAt": "2026-08-25T04:18:02.679Z"
+    },
+    {
+      "id": "gregory-6",
+      "label": "St. Gregory",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gregory/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:OCP_Society_honors_Coptic_Bishop_Anba_Paulose_of_Greece_with_the_Icon_of_St_Gregory_of_Parumala.jpg",
+      "qualityScore": 33,
+      "deniedAt": "2026-08-25T04:18:03.543Z"
+    },
+    {
+      "id": "gregory-8",
+      "label": "St. Gregory",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gregory/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Addis_Ababa_Conference_Portal_powered_by_OCP_inaugurated_at_all_UAE_National_Ethiopian_Youth_Conference,_Ethiopian_Orthodox_Prelates_Honored_by_OCP_Society.jpeg",
+      "qualityScore": 23,
+      "deniedAt": "2026-08-25T04:18:05.351Z"
+    },
+    {
+      "id": "mary-4",
+      "label": "St. Mary",
+      "tradition": "Greek",
+      "path": "/icon-review/mary/04-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:VirginMaryprayercorner.JPG",
+      "qualityScore": 41,
+      "deniedAt": "2026-08-25T04:18:06.190Z"
+    },
+    {
+      "id": "james-1",
+      "label": "St. James",
+      "tradition": "Orthodox",
+      "path": "/icon-review/james/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-headed_Gull_-_St_James%27s_Park,_London_-_Nov_2006.jpg",
+      "qualityScore": 47,
+      "deniedAt": "2026-08-25T04:18:06.998Z"
+    },
+    {
+      "id": "james-3",
+      "label": "St. James",
+      "tradition": "Orthodox",
+      "path": "/icon-review/james/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andreas_Ritzos_-_Icon-_Ascension_of_Christ_with_the_Hetoimasia_-_Google_Art_Project.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:18:08.862Z"
+    },
+    {
+      "id": "panteleimon-2",
+      "label": "Saint Panteleimon",
+      "tradition": "Orthodox",
+      "path": "/icon-review/panteleimon/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isparta_museum_18th_century_icons_2806.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:18:10.990Z"
+    },
+    {
+      "id": "luke-the-evangelist-4",
+      "label": "Saint Luke the Evangelist",
+      "tradition": "Orthodox",
+      "path": "/icon-review/luke-the-evangelist/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_-_Triptych_Icon_of_the_Virgin_and_Child_with_Saints_-_Walters_71158_-_Back_Closed.jpg",
+      "qualityScore": 30,
+      "deniedAt": "2026-08-25T04:18:14.727Z"
+    },
+    {
+      "id": "luke-the-evangelist-5",
+      "label": "Saint Luke the Evangelist",
+      "tradition": "Orthodox",
+      "path": "/icon-review/luke-the-evangelist/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_-_Triptych_Icon_of_the_Virgin_and_Child_with_Saints_-_Walters_71158_-_Front_Closed.jpg",
+      "qualityScore": 30,
+      "deniedAt": "2026-08-25T04:18:15.742Z"
+    },
+    {
+      "id": "luke-the-evangelist-7",
+      "label": "Saint Luke the Evangelist",
+      "tradition": "Orthodox",
+      "path": "/icon-review/luke-the-evangelist/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_-_Triptych_Icon_of_the_Virgin_and_Child_with_Saints_-_Walters_71158_-_Back_Open.jpg",
+      "qualityScore": 23,
+      "deniedAt": "2026-08-25T04:18:21.206Z"
+    },
+    {
+      "id": "luke-the-evangelist-8",
+      "label": "Saint Luke the Evangelist",
+      "tradition": "Orthodox",
+      "path": "/icon-review/luke-the-evangelist/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_-_Triptych_Icon_of_the_Virgin_and_Child_with_Saints_-_Walters_71158_-_Front_Open.jpg",
+      "qualityScore": 23,
+      "deniedAt": "2026-08-25T04:18:22.343Z"
+    },
+    {
+      "id": "antonius-1",
+      "label": "St. Antonius",
+      "tradition": "Orthodox",
+      "path": "/icon-review/antonius/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hannover_St_Antonius_Marienbild.jpg",
+      "qualityScore": 49,
+      "deniedAt": "2026-08-25T04:18:24.062Z"
+    },
+    {
+      "id": "antonius-2",
+      "label": "St. Antonius",
+      "tradition": "Orthodox",
+      "path": "/icon-review/antonius/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rheinuferpromenade_with_plane_trees_and_view_of_Oberkassel,_D%C3%BCsseldorf.jpg",
+      "qualityScore": 20,
+      "deniedAt": "2026-08-25T04:18:25.814Z"
+    },
+    {
+      "id": "longinus-1",
+      "label": "St. Longinus",
+      "tradition": "Orthodox",
+      "path": "/icon-review/longinus/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russian_orthodox_crucifix_w_relief_icon_(cast_metal_brass_cross)_found_in_wreck_of_WW2_German_Navy_Kriegsmarine_battleship_Tirpitz_sunk_outside_Troms%C3%B8,_Norway_1944._Lofoten_Krigsminnemuseum_2019_DSC00337.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:18:35.136Z"
+    },
+    {
+      "id": "longinus-2",
+      "label": "St. Longinus",
+      "tradition": "Orthodox",
+      "path": "/icon-review/longinus/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russian_orthodox_crucifix_w_relief_icon_(cast_metal_brass_cross)_found_in_wreck_of_WW2_German_Navy_Kriegsmarine_battleship_Tirpitz_sunk_outside_Troms%C3%B8_1944._Lofoten_Krigsminnemuseum_WWII_Museum_Norway_2022_IMG_7539.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:18:36.774Z"
+    },
+    {
+      "id": "felix-1",
+      "label": "St. Felix",
+      "tradition": "Orthodox",
+      "path": "/icon-review/felix/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Homokkomarom_templeinner_left.jpg",
+      "qualityScore": 18,
+      "deniedAt": "2026-08-25T04:18:40.223Z"
+    },
+    {
+      "id": "felix-2",
+      "label": "St. Felix",
+      "tradition": "Orthodox",
+      "path": "/icon-review/felix/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Homokkomarom_icon_and_relic.jpg",
+      "qualityScore": 18,
+      "deniedAt": "2026-08-25T04:18:41.769Z"
+    },
+    {
+      "id": "mina-1",
+      "label": "St. Mina",
+      "tradition": "Coptic",
+      "path": "/icon-review/mina/01-coptic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ampulla_Menas_Louvre_AF7035.jpg",
+      "qualityScore": 54,
+      "deniedAt": "2026-08-25T04:18:43.375Z"
+    },
+    {
+      "id": "mina-3",
+      "label": "St. Mina",
+      "tradition": "Coptic",
+      "path": "/icon-review/mina/03-coptic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Menas.jpg",
+      "qualityScore": 37,
+      "deniedAt": "2026-08-25T04:18:48.904Z"
+    },
+    {
+      "id": "mina-4",
+      "label": "St. Mina",
+      "tradition": "Orthodox",
+      "path": "/icon-review/mina/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kristus_a_svat%C3%BD_Menas.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:18:50.926Z"
+    },
+    {
+      "id": "john-chrysostom-4",
+      "label": "St. John Chrysostom",
+      "tradition": "Orthodox",
+      "path": "/icon-review/john-chrysostom/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEC_2024_Divine_Liturgy_Altar.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:19:19.471Z"
+    },
+    {
+      "id": "john-chrysostom-6",
+      "label": "St. John Chrysostom",
+      "tradition": "Orthodox",
+      "path": "/icon-review/john-chrysostom/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Patriarchal_Church_of_St._George_-_larnax,_Instanbul.JPG",
+      "qualityScore": 29,
+      "deniedAt": "2026-08-25T04:19:22.839Z"
+    },
+    {
+      "id": "marina-2",
+      "label": "St. Marina",
+      "tradition": "Orthodox",
+      "path": "/icon-review/marina/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Panagia_Amasgou,_Monagri,_Cyprus,_icons_-_St._Marina_-_MSBZ004_BF_S_1978_4107D_-_Dumbarton_Oaks.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:19:36.680Z"
+    },
+    {
+      "id": "marina-3",
+      "label": "St. Marina",
+      "tradition": "Orthodox",
+      "path": "/icon-review/marina/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Panagia_Amasgou,_Monagri,_Cyprus,_icons_-_St._Marina,_detail_of_head_-_MSBZ004_BF_S_1978_4108_-_Dumbarton_Oaks.jpg",
+      "qualityScore": 40,
+      "deniedAt": "2026-08-25T04:19:38.240Z"
+    },
+    {
+      "id": "peter-2",
+      "label": "St. Peter",
+      "tradition": "Coptic",
+      "path": "/icon-review/peter/02-coptic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liturgical_codex_Louvre_E10094.jpg",
+      "qualityScore": 51,
+      "deniedAt": "2026-08-25T04:19:51.249Z"
+    },
+    {
+      "id": "peter-3",
+      "label": "St. Peter",
+      "tradition": "Orthodox",
+      "path": "/icon-review/peter/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madonna_and_Child_with_Christ,_with_St_Peter_and_Gabriel,_and_St_Paul_and_the_Virgin,_Simone_dei_Crocifissi,_Bologna,_c._1330-1399,_tempera_on_gold_panel_-_Blanton_Museum_of_Art_-_Austin,_Texas_-_DSC07691.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:19:53.024Z"
+    },
+    {
+      "id": "peter-5",
+      "label": "St. Peter",
+      "tradition": "Orthodox",
+      "path": "/icon-review/peter/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Saints_Peter_and_Paul,_Kriva_Reka_-_Frescoes_02.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:19:56.696Z"
+    },
+    {
+      "id": "clement-2",
+      "label": "St. Clement",
+      "tradition": "Orthodox",
+      "path": "/icon-review/clement/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mother_of_Perpetual_Help_Chapel_(Washington_Basilica).JPG",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:20:07.105Z"
+    },
+    {
+      "id": "clement-4",
+      "label": "St. Clement",
+      "tradition": "Orthodox",
+      "path": "/icon-review/clement/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mozaik_Svetog_Klimenta_Ohridskog,_Crkva_Sv._Klimenta_Ohridskog,_Skoplje.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:20:10.624Z"
+    },
+    {
+      "id": "clement-5",
+      "label": "St. Clement",
+      "tradition": "Orthodox",
+      "path": "/icon-review/clement/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SvetiSedmochislenitsi-3.jpg",
+      "qualityScore": 34,
+      "deniedAt": "2026-08-25T04:20:11.672Z"
+    },
+    {
+      "id": "andrew-the-apostle-1",
+      "label": "St. Andrew the Apostle",
+      "tradition": "Orthodox",
+      "path": "/icon-review/andrew-the-apostle/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Perpetual_Help_of_St._Andrew_the_Apostle_Church,_Makati.jpg",
+      "qualityScore": 65,
+      "deniedAt": "2026-08-25T04:20:19.504Z"
+    },
+    {
+      "id": "andrew-the-apostle-8",
+      "label": "St. Andrew the Apostle",
+      "tradition": "Orthodox",
+      "path": "/icon-review/andrew-the-apostle/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Melton,_St_Andrew,_icons_-_geograph.org.uk_-_2052295.jpg",
+      "qualityScore": 31,
+      "deniedAt": "2026-08-25T04:20:39.545Z"
+    },
+    {
+      "id": "nicholas-1",
+      "label": "St. Nicholas",
+      "tradition": "Greek",
+      "path": "/icon-review/nicholas/01-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Nicholas_Greek_Orthodox_Church_of_Baltimore_30.jpg",
+      "qualityScore": 60,
+      "deniedAt": "2026-08-25T04:20:40.609Z"
+    },
+    {
+      "id": "nicholas-2",
+      "label": "St. Nicholas",
+      "tradition": "Greek",
+      "path": "/icon-review/nicholas/02-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banners_in_the_Greek_Orthodox_church_of_St_Nicholas.jpg",
+      "qualityScore": 60,
+      "deniedAt": "2026-08-25T04:20:41.577Z"
+    },
+    {
+      "id": "john-1",
+      "label": "St. John",
+      "tradition": "Greek",
+      "path": "/icon-review/john/01-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BayouStJohnGreekFest2009_1.JPG",
+      "qualityScore": 60,
+      "deniedAt": "2026-08-25T04:20:47.890Z"
+    },
+    {
+      "id": "john-4",
+      "label": "St. John",
+      "tradition": "Greek",
+      "path": "/icon-review/john/04-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maryhill_Museum_-_St._Barbara,_St._Seraphim,_and_St._John_of_Damascus_(Ioannes_Eugenoglu)_-_detail_02.jpg",
+      "qualityScore": 60,
+      "deniedAt": "2026-08-25T04:20:59.057Z"
+    },
+    {
+      "id": "john-5",
+      "label": "St. John",
+      "tradition": "Greek",
+      "path": "/icon-review/john/05-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BayouStJohn13FebFloodgateToGreekChurch.jpg",
+      "qualityScore": 59,
+      "deniedAt": "2026-08-25T04:21:00.153Z"
+    },
+    {
+      "id": "john-6",
+      "label": "St. John",
+      "tradition": "Greek",
+      "path": "/icon-review/john/06-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BayouStJohnGreekChurch13Feb06.jpg",
+      "qualityScore": 56,
+      "deniedAt": "2026-08-25T04:21:01.154Z"
+    },
+    {
+      "id": "barnabas-5",
+      "label": "St. Barnabas",
+      "tradition": "Orthodox",
+      "path": "/icon-review/barnabas/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Barnabas_Archaeology_and_Icon_Museum_13.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:21:18.649Z"
+    },
+    {
+      "id": "barnabas-6",
+      "label": "St. Barnabas",
+      "tradition": "Orthodox",
+      "path": "/icon-review/barnabas/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Barnabas_Archaeology_and_Icon_Museum_20.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:21:19.553Z"
+    },
+    {
+      "id": "barnabas-8",
+      "label": "St. Barnabas",
+      "tradition": "Orthodox",
+      "path": "/icon-review/barnabas/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salamis_Saint_Barnabas_museum_icon_St_George_slaying_the_dragon_02.jpg",
+      "qualityScore": 48,
+      "deniedAt": "2026-08-25T04:21:23.625Z"
+    },
+    {
+      "id": "basil-the-great-1",
+      "label": "St. Basil the Great",
+      "tradition": "Coptic",
+      "path": "/icon-review/basil-the-great/01-coptic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Mercurios_Killing_King_Oleonus_(St._Mercurios_Killing_Emperor_Julian_the_Apostate)_(3309043161).jpg",
+      "qualityScore": 54,
+      "deniedAt": "2026-08-25T04:21:25.393Z"
+    },
+    {
+      "id": "james-the-apostle-2",
+      "label": "St. James the Apostle",
+      "tradition": "Orthodox",
+      "path": "/icon-review/james-the-apostle/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_of_Jesus,_Lebanon_(14th_Century).jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:20.123Z"
+    },
+    {
+      "id": "james-the-apostle-5",
+      "label": "St. James the Apostle",
+      "tradition": "Orthodox",
+      "path": "/icon-review/james-the-apostle/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Last_Supper_by_Theophanes_the_Cretan.jpg",
+      "qualityScore": 17,
+      "deniedAt": "2026-08-25T04:22:27.218Z"
+    },
+    {
+      "id": "elizabeth-2",
+      "label": "St. Elizabeth",
+      "tradition": "Orthodox",
+      "path": "/icon-review/elizabeth/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Elizabeth_of_Hungary_Parish_Church_(Slovenj_Gradec)_09.jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:22:32.010Z"
+    },
+    {
+      "id": "elizabeth-3",
+      "label": "St. Elizabeth",
+      "tradition": "Orthodox",
+      "path": "/icon-review/elizabeth/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Mary_Magdalene_IMG_3531.JPG",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:33.194Z"
+    },
+    {
+      "id": "gabriel-2",
+      "label": "St. Gabriel",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gabriel/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Gabriel_chapel_-_icon_of_Arch._Gabriel_(Annunciation_Cathedral_in_Moscow)_by_shakko.jpg",
+      "qualityScore": 40,
+      "deniedAt": "2026-08-25T04:22:40.972Z"
+    },
+    {
+      "id": "gabriel-3",
+      "label": "St. Gabriel",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gabriel/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:NMAfA-S20140018-000001.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:42.219Z"
+    },
+    {
+      "id": "gabriel-4",
+      "label": "St. Gabriel",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gabriel/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_annunciation_(Trinity-Serguis_Lavra).jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:43.139Z"
+    },
+    {
+      "id": "gabriel-7",
+      "label": "St. Gabriel",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gabriel/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Annunciation,_Gregory_of_Tatev.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:51.707Z"
+    },
+    {
+      "id": "gabriel-8",
+      "label": "St. Gabriel",
+      "tradition": "Orthodox",
+      "path": "/icon-review/gabriel/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%92%D0%BE%D0%B7%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%92%D0%BE%D0%B7%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC_%D0%9C%D0%B0%D0%BA%D0%B0%D1%80%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D0%B5_5.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:52.707Z"
+    },
+    {
+      "id": "eusebius-1",
+      "label": "St. Eusebius",
+      "tradition": "Orthodox",
+      "path": "/icon-review/eusebius/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:United_Nations_Conciliation_Commission_for_Palestine_Working_Paper_on_the_Holy_Places.djvu",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:22:53.500Z"
+    },
+    {
+      "id": "theodore-2",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Theodore_(Ceramic_icon).jpg",
+      "qualityScore": 50,
+      "deniedAt": "2026-08-25T04:23:06.604Z"
+    },
+    {
+      "id": "theodore-3",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_enameled_icon_of_Theodore_Stratelates.jpg",
+      "qualityScore": 46,
+      "deniedAt": "2026-08-25T04:23:09.251Z"
+    },
+    {
+      "id": "theodore-4",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Theotokos_of_St._Theodore_from_Abylkhan_Kasteev_National_Museum_of_Arts,_XVIII_century.jpg",
+      "qualityScore": 36,
+      "deniedAt": "2026-08-25T04:23:10.458Z"
+    },
+    {
+      "id": "theodore-5",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maryhill_Museum_-_Quadripartite_icon_of_the_Mother_of_God_(late_19th_century_Russian_icon)_01.jpg",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:23:11.339Z"
+    },
+    {
+      "id": "theodore-6",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:15th-century_unknown_painters_-_Icon_of_St_Theodore_Stratilates_and_St_Theodore_Tyron_-_WGA23498.jpg",
+      "qualityScore": 33,
+      "deniedAt": "2026-08-25T04:23:12.371Z"
+    },
+    {
+      "id": "theodore-8",
+      "label": "St. Theodore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/theodore/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dimensional_icon_of_Fedor_III_by_S.Ushakov_(1661,_Kremlin_museum).jpg",
+      "qualityScore": 27,
+      "deniedAt": "2026-08-25T04:23:16.915Z"
+    },
+    {
+      "id": "basilius-4",
+      "label": "St. Basilius",
+      "tradition": "Orthodox",
+      "path": "/icon-review/basilius/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Christian_Tombiling-_through_the_hands_of_-_Deesis_and_Feast_Row_on_Indonesian_Byzantine_Catholic_Chapel.jpg",
+      "qualityScore": 23,
+      "deniedAt": "2026-08-25T04:23:33.675Z"
+    },
+    {
+      "id": "basilius-5",
+      "label": "St. Basilius",
+      "tradition": "Orthodox",
+      "path": "/icon-review/basilius/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vasily_blazh.jpg",
+      "qualityScore": 17,
+      "deniedAt": "2026-08-25T04:23:34.548Z"
+    },
+    {
+      "id": "isidore-1",
+      "label": "St. Isidore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/isidore/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:LucbanChurchjf8928_03.JPG",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:23:35.259Z"
+    },
+    {
+      "id": "isidore-2",
+      "label": "St. Isidore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/isidore/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:TalaveraChurchjf9795_01.JPG",
+      "qualityScore": 35,
+      "deniedAt": "2026-08-25T04:23:35.980Z"
+    },
+    {
+      "id": "isidore-3",
+      "label": "St. Isidore",
+      "tradition": "Orthodox",
+      "path": "/icon-review/isidore/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martyr_Myrope_of_Chios.jpg",
+      "qualityScore": 15,
+      "deniedAt": "2026-08-25T04:23:37.643Z"
+    }
+  ]
+}
