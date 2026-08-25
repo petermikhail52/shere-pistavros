@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-25T05:23:46.404Z",
+  "generatedAt": "2026-08-25T05:31:35.108Z",
   "source": "Wikimedia Commons",
   "candidates": [
     {
@@ -4127,6 +4127,50 @@
       "attribution": "Иконописная мастерская Елеон",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "id": "polycarp-1787635481845-3",
+      "label": "St. Polycarp",
+      "tradition": "Orthodox",
+      "qualityScore": 33,
+      "path": "/icon-review/polycarp/03-orthodox.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polycarp_of_Smyrna,_Menologion_of_Basil_II.png",
+      "attribution": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators[1]:\nPantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor \n(Online on Vatican site)",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "polycarp-1787635484957-4",
+      "label": "St. Polycarp",
+      "tradition": "Orthodox",
+      "qualityScore": 31,
+      "path": "/icon-review/polycarp/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polycarp.jpg",
+      "attribution": "Wikimedia Commons contributor",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "polycarp-1787635490271-5",
+      "label": "St. Polycarp",
+      "tradition": "Orthodox",
+      "qualityScore": 31,
+      "path": "/icon-review/polycarp/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hosios_Loukas_(diakonikon)_-_Polycarp.jpg",
+      "attribution": "Shakko",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "matthias-1787635760172-1",
+      "label": "St. Matthias",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/matthias/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St._Servatius_und_St._Matthias_(Dahnen)_12.jpg",
+      "attribution": "Thomas Hummel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
   ],
   "skipped": [
@@ -6276,6 +6320,102 @@
     },
     {
       "label": "St. Zadok and the 128 who were with Him",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Eustathius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Theodore",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Abba Kyrillos the Sixth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Narcissus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Alexandrus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Marcura",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Macrobius (Makrawy) the Bishop",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Cosmas",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Porphyry",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Hadid the priest",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Haboulyous (Hanulius) the prince",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Serapamon",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Eudexia (Eutychia)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Peter the priest",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Theodotus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mary the Israelite",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Julian",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Arianus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Konan",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Basil (Basilaos) The Bishop",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Demetrius the Twelfth Pope of Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Malachias of Palestine",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Glathinos in Damascus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Macarius the Great and Anba Macarius of Alexandria",
       "reason": "No clear licensed icon candidate found"
     }
   ]
