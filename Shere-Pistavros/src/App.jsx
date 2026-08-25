@@ -1533,37 +1533,84 @@ if (cached) return cached;
 
 const img = await loadImageFromDataUrl(dataUrl);
 const canvas = document.createElement("canvas");
-canvas.width = 48;
-canvas.height = 48;
+canvas.width = 64;
+canvas.height = 64;
 const ctx = canvas.getContext("2d");
 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
 
-const lumaBins = new Array(16).fill(0);
-const chromaBins = new Array(12).fill(0);
+const computeRegionVector = (sx, sy, width, height) => {
+const pixels = ctx.getImageData(sx, sy, width, height).data;
+const lumaBins = new Array(20).fill(0);
+const saturationBins = new Array(10).fill(0);
+const edgeBins = new Array(8).fill(0);
 const grid = [];
 
-for (let y = 0; y < canvas.height; y += 1) {
-for (let x = 0; x < canvas.width; x += 1) {
-const idx = (y * canvas.width + x) * 4;
+const getLumaAt = (x, y) => {
+const idx = (y * width + x) * 4;
 const r = pixels[idx];
 const g = pixels[idx + 1];
 const b = pixels[idx + 2];
-const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-const lumaBin = Math.min(15, Math.floor(luma / 16));
+return {
+    luma: 0.2126 * r + 0.7152 * g + 0.0722 * b,
+    saturation: Math.max(r, g, b) - Math.min(r, g, b),
+};
+};
+
+for (let y = 0; y < height; y += 1) {
+for (let x = 0; x < width; x += 1) {
+const { luma, saturation } = getLumaAt(x, y);
+const lumaBin = Math.min(lumaBins.length - 1, Math.floor(luma / (256 / lumaBins.length)));
+const saturationBin = Math.min(saturationBins.length - 1, Math.floor(saturation / (256 / saturationBins.length)));
 lumaBins[lumaBin] += 1;
-
-const chroma = Math.max(r, g, b) - Math.min(r, g, b);
-const chromaBin = Math.min(11, Math.floor(chroma / 22));
-chromaBins[chromaBin] += 1;
-
-if (x % 4 === 0 && y % 4 === 0) {
-grid.push(luma / 255);
-}
+saturationBins[saturationBin] += 1;
 }
 }
 
-const vector = normalizeVector([...lumaBins, ...chromaBins, ...grid]);
+for (let y = 1; y < height - 1; y += 1) {
+for (let x = 1; x < width - 1; x += 1) {
+const center = getLumaAt(x, y).luma;
+const gx = getLumaAt(x + 1, y).luma - getLumaAt(x - 1, y).luma;
+const gy = getLumaAt(x, y + 1).luma - getLumaAt(x, y - 1).luma;
+const magnitude = Math.sqrt(gx * gx + gy * gy);
+if (magnitude < 10) continue;
+const angle = Math.atan2(gy, gx);
+const normalizedAngle = (angle + Math.PI) / (2 * Math.PI);
+const edgeBin = Math.min(edgeBins.length - 1, Math.floor(normalizedAngle * edgeBins.length));
+edgeBins[edgeBin] += Math.min(4, magnitude / 40) + center / 512;
+}
+}
+
+for (let gy = 0; gy < 8; gy += 1) {
+for (let gx = 0; gx < 8; gx += 1) {
+const cellX = Math.floor((gx / 8) * width);
+const cellY = Math.floor((gy / 8) * height);
+const sample = getLumaAt(Math.min(width - 1, cellX), Math.min(height - 1, cellY));
+grid.push(sample.luma / 255);
+}
+}
+
+return normalizeVector([...lumaBins, ...saturationBins, ...edgeBins, ...grid]);
+};
+
+const regions = [
+{ sx: 0, sy: 0, width: 64, height: 64, weight: 0.55 },
+{ sx: 8, sy: 8, width: 48, height: 48, weight: 0.35 },
+{ sx: 16, sy: 8, width: 40, height: 40, weight: 0.1 },
+];
+
+const weighted = regions.map(({ sx, sy, width, height, weight }) => ({
+weight,
+vector: computeRegionVector(sx, sy, width, height),
+}));
+const vectorLength = weighted[0]?.vector.length || 0;
+const mergedVector = new Array(vectorLength).fill(0);
+weighted.forEach(({ weight, vector: regionVector }) => {
+for (let index = 0; index < regionVector.length; index += 1) {
+mergedVector[index] += regionVector[index] * weight;
+}
+});
+
+const vector = normalizeVector(mergedVector);
 embeddingCacheRef.current.set(dataUrl, vector);
 return vector;
 }, []);
@@ -1605,7 +1652,7 @@ throw new Error("unsupported");
 const s = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
 streamRef.current = s;
 setCameraOn(true);
-setCameraStatus("Looking for a steady icon…");
+setCameraStatus("Tap Capture any time. Auto-capture triggers when the icon is clear.");
 setError("");
 } catch (e) {
 console.error("Could not access camera", e);
@@ -1685,24 +1732,24 @@ const detail = edgeTotal / edgeCount;
 const movement = previousSignature
 ? signature.reduce((total, value, index) => total + Math.abs(value - previousSignature[index]), 0) / sampleCount
 : Infinity;
-const iconVisible = averageLuminance > 35 && averageLuminance < 220 && contrast > 24 && detail > 11;
+const iconVisible = averageLuminance > 25 && averageLuminance < 235 && contrast > 18 && detail > 8;
 
-if (iconVisible && movement < 7) {
+if (iconVisible && movement < 12) {
 stableFrames += 1;
-setCameraStatus(stableFrames >= 3 ? "Icon found. Hold steady…" : "Looking for a steady icon…");
+setCameraStatus(stableFrames >= 2 ? "Icon is clear. Auto-capturing…" : "Icon detected. Keep it roughly centered.");
 } else {
 stableFrames = 0;
-setCameraStatus("Looking for a steady icon…");
+setCameraStatus(iconVisible ? "Good framing. Tap Capture now for an instant shot." : "Tap Capture any time. Auto-capture triggers when the icon is clear.");
 }
 previousSignature = signature;
 
-if (stableFrames >= 5) {
+if (stableFrames >= 3) {
 captured = true;
 capturePhoto();
 }
 };
 
-const intervalId = window.setInterval(detectIcon, 250);
+const intervalId = window.setInterval(detectIcon, 180);
 return () => window.clearInterval(intervalId);
 }, [cameraOn, capturePhoto]);
 
@@ -1765,9 +1812,13 @@ similarity: Math.max(0, Math.min(100, Math.round(score * 100))),
 const bestCandidate = rankedCandidates[0];
 const bestName = bestCandidate?.name || "Unknown Saint";
 const bestScore = bestCandidate?.score ?? -1;
+const secondScore = rankedCandidates[1]?.score ?? Math.max(0, bestScore - 0.12);
+const separation = Math.max(0, bestScore - secondScore);
+const supportBoost = Math.min(0.08, (bestCandidate?.samples || 1) * 0.015);
 
-const confidence = Math.max(0.08, Math.min(0.99, (bestScore - 0.55) / 0.4));
-const isConfident = confidence >= LOCAL_MATCH_THRESHOLD;
+const baseConfidence = (bestScore - 0.48) / 0.45;
+const confidence = Math.max(0, Math.min(0.99, baseConfidence + separation * 2 + supportBoost));
+const isConfident = confidence >= LOCAL_MATCH_THRESHOLD && separation >= 0.018;
 const displayName = isConfident ? bestName : "Unknown Saint";
 const similarityPct = Math.max(0, Math.min(100, Math.round(bestScore * 100)));
 
