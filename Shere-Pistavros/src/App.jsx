@@ -641,6 +641,29 @@ return fallbackValue;
 }
 };
 
+const withBaseUrl = (path) => {
+const base = import.meta.env.BASE_URL || "/";
+const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+return `${normalizedBase}${path.replace(/^\/+/, "")}`;
+};
+
+const fetchJsonFirstAvailable = async (paths, errorMessage) => {
+let lastError;
+for (const path of paths) {
+try {
+const response = await fetch(path, { cache: "no-store" });
+if (!response.ok) {
+lastError = new Error(`${response.status} ${response.statusText}`);
+continue;
+}
+return response.json();
+} catch (error) {
+lastError = error;
+}
+}
+throw new Error(errorMessage || lastError?.message || "Request failed");
+};
+
 const parseModelJson = (text) => {
 if (!text || typeof text !== "string") {
 throw new Error("Empty AI response");
@@ -1054,9 +1077,10 @@ setError("Could not save denied candidates locally.");
 }
 };
 const fetchReviewQueueCandidates = async () => {
-const response = await fetch("/synaxarium-icon-review-manifest.json", { cache: "no-store" });
-if (!response.ok) throw new Error("No icon review manifest was found. Download review candidates first.");
-const manifest = await response.json();
+const manifest = await fetchJsonFirstAvailable(
+[withBaseUrl("synaxarium-icon-review-manifest.json"), "/synaxarium-icon-review-manifest.json"],
+"No icon review manifest was found. Download review candidates first.",
+);
 if (!Array.isArray(manifest.candidates)) throw new Error("The icon review manifest is invalid.");
 
 let mergedDenials = reviewDenials;
@@ -1099,7 +1123,12 @@ try {
 setReviewCandidates(await fetchReviewQueueCandidates());
 } catch (e) {
 console.error("Could not load icon review queue", e);
-setError(e.message || "Could not load icon review queue.");
+const failedFetch = /failed to fetch/i.test(e?.message || "");
+setError(
+failedFetch
+? "Could not reach the downloaded icon manifest. Confirm the app is running from the project dev server and that Images/synaxarium-icon-review-manifest.json exists."
+: (e.message || "Could not load icon review queue."),
+);
 } finally {
 setCollectionImporting(false);
 }

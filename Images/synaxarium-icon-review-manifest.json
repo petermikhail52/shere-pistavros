@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-25T05:47:44.872Z",
+  "generatedAt": "2026-08-25T05:52:11.640Z",
   "source": "Wikimedia Commons",
   "candidates": [
     {
@@ -4270,6 +4270,105 @@
       "attribution": "Brosen",
       "license": "CC BY 2.5",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+    },
+    {
+      "id": "mark-1787636891103-1",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/mark/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg-782_Sveti-Marko-slikostoj.jpg",
+      "attribution": "Stebunik",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "mark-1787636896760-2",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/mark/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg-803_filigranska-podoba-Svetega-Marka.jpg",
+      "attribution": "Stebunik",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "mark-1787636901326-3",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 44,
+      "path": "/icon-review/mark/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg_0361_Sveti-Marko_svete-ikone.jpg",
+      "attribution": "Stebunik",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "id": "mark-1787636904906-4",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/mark/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minuscule_1582_-_Icon_of_Mark_the_Evangelist.jpg",
+      "attribution": "Library of Congress, United States",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "mark-1787636911254-5",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/mark/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg-773_podoba-Bogorodice.jpg",
+      "attribution": "Stebunik",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "mark-1787636917383-6",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/mark/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg-764_Podoba-Kristusa-Vsevladarja.jpg",
+      "attribution": "Stebunik",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "mark-1787636933452-7",
+      "label": "Saint Mark",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/mark/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bg-786_slikonos-s-svetimi-podobami.jpg",
+      "attribution": "Stebunik",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "mark-1787636948669-8",
+      "label": "Saint Mark",
+      "tradition": "Greek",
+      "qualityScore": 34,
+      "path": "/icon-review/mark/08-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Ortodoxa_Griega_de_Santa_Sofia_(Naucalpan)_Estado_Mexico_(3376865483).jpg",
+      "attribution": "Catedrales e Iglesias/Cathedrals and Churches from Ciudad de México, Mexico",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "id": "jason-1787636991347-1",
+      "label": "St. Jason",
+      "tradition": "Orthodox",
+      "qualityScore": 32,
+      "path": "/icon-review/jason/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mentone,_Cairo_and_Corfu_(1896)_(14597064908).jpg",
+      "attribution": "Internet Archive Book Images",
+      "license": "No restrictions",
+      "licenseUrl": "https://www.flickr.com/commons/usage/"
     }
   ],
   "skipped": [
@@ -6711,6 +6810,46 @@
     },
     {
       "label": "St. Erastus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Tadros (Theodore)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Philothaos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Otimus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Gabriel IV",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Jeremiah the Prophet",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Isaac El-Defrawi",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Macarius of Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Athanasius the Apostolic the 20th",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. John of Senhout",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Daniel the Archpriest of Sheahat (Scetis)",
       "reason": "No clear licensed icon candidate found"
     }
   ]
