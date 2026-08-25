@@ -1028,6 +1028,37 @@ setCloudSyncStatus("Cloud sync unavailable");
 }, 500);
 }, []);
 
+const pushCloudSnapshotNow = useCallback(async (nextSnapshot) => {
+try {
+const payload = await buildCloudPayload(nextSnapshot);
+const response = await fetch(CLOUD_SYNC_ENDPOINT, {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(payload),
+});
+
+if (response.status === 404 || response.status === 503) {
+setCloudSyncStatus("Local archive mode");
+return false;
+}
+if (response.status === 413) {
+setCloudSyncStatus("Cloud payload too large");
+return false;
+}
+if (!response.ok) {
+const details = await response.json().catch(() => ({}));
+throw new Error(details.error || `Cloud sync failed: ${response.status}`);
+}
+
+setCloudSyncStatus("Cloud synced");
+return true;
+} catch (error) {
+console.warn("Immediate cloud sync failed", error);
+setCloudSyncStatus("Cloud sync unavailable");
+return false;
+}
+}, []);
+
 // ── Persist training data & history ──────────────────────────────────────
 useEffect(() => {
 (async () => {
@@ -1041,6 +1072,8 @@ console.warn("Could not request persistent browser storage", e);
 }
 let loadedTrainingData = [];
 let loadedHistory = [];
+let loadedCatalog = [];
+let loadedDenials = [];
 try {
 const td = await storage.get(STORAGE_KEYS.trainingData);
 if (td) {
@@ -1062,7 +1095,8 @@ console.error("Could not load history", e);
 try {
 const catalog = await storage.get(STORAGE_KEYS.synaxariumCatalog);
 if (catalog) {
-setSynaxariumCatalog(parseStoredJson(catalog.value, [], "Synaxarium catalog"));
+loadedCatalog = parseStoredJson(catalog.value, [], "Synaxarium catalog");
+setSynaxariumCatalog(loadedCatalog);
 }
 } catch (e) {
 console.error("Could not load Synaxarium catalog", e);
@@ -1070,7 +1104,8 @@ console.error("Could not load Synaxarium catalog", e);
 try {
 const denied = await storage.get(STORAGE_KEYS.reviewDenials);
 if (denied) {
-setReviewDenials(parseStoredJson(denied.value, [], "review denials"));
+loadedDenials = parseStoredJson(denied.value, [], "review denials");
+setReviewDenials(loadedDenials);
 }
 } catch (e) {
 console.error("Could not load review denials", e);
@@ -1093,6 +1128,8 @@ const cloudCatalog = Array.isArray(cloudSnapshot.synaxariumCatalog) ? cloudSnaps
 const cloudDenials = Array.isArray(cloudSnapshot.reviewDenials) ? cloudSnapshot.reviewDenials : [];
 const cloudLooksRicher = cloudTraining.length > loadedTrainingData.length
 || (cloudTraining.length === loadedTrainingData.length && cloudHistory.length > loadedHistory.length);
+const cloudIsEmpty = cloudTraining.length === 0 && cloudHistory.length === 0 && cloudCatalog.length === 0 && cloudDenials.length === 0;
+const localHasData = loadedTrainingData.length > 0 || loadedHistory.length > 0 || loadedCatalog.length > 0 || loadedDenials.length > 0;
 
 if (cloudLooksRicher) {
 loadedTrainingData = cloudTraining;
@@ -1106,7 +1143,17 @@ await storage.set(STORAGE_KEYS.history, JSON.stringify(cloudHistory));
 await storage.set(STORAGE_KEYS.synaxariumCatalog, JSON.stringify(cloudCatalog));
 await storage.set(STORAGE_KEYS.reviewDenials, JSON.stringify(cloudDenials));
 }
+if (!cloudLooksRicher && cloudIsEmpty && localHasData) {
+const seeded = await pushCloudSnapshotNow({
+trainingData: loadedTrainingData,
+history: loadedHistory,
+synaxariumCatalog: loadedCatalog,
+reviewDenials: loadedDenials,
+});
+setCloudSyncStatus(seeded ? "Cloud bootstrapped from local" : "Cloud connected");
+} else {
 setCloudSyncStatus("Cloud connected");
+}
 } else {
 setCloudSyncStatus("Local archive mode");
 }
@@ -1125,7 +1172,7 @@ const maxExistingId = [...loadedTrainingData, ...loadedHistory]
 idRef.current = maxExistingId + 1;
 cloudSyncReadyRef.current = true;
 })();
-}, []);
+}, [pushCloudSnapshotNow]);
 
 useEffect(() => {
 return () => {
