@@ -666,12 +666,53 @@ throw new Error(errorMessage || lastError?.message || "Request failed");
 };
 
 const fetchCloudSnapshot = async () => {
-    const response = await fetch(CLOUD_SYNC_ENDPOINT, { cache: "no-store" });
-    if (response.status === 404 || response.status === 503) return null;
-    if (!response.ok) throw new Error(`Cloud sync request failed: ${response.status}`);
-    const payload = await response.json();
-    if (!payload || !Array.isArray(payload.trainingData) || !Array.isArray(payload.history)) return null;
-    return payload;
+const response = await fetch(CLOUD_SYNC_ENDPOINT, { cache: "no-store" });
+if (response.status === 404 || response.status === 503) return null;
+if (!response.ok) {
+const details = await response.json().catch(() => ({}));
+throw new Error(details.error || `Cloud sync request failed: ${response.status}`);
+}
+const payload = await response.json();
+if (!payload || !Array.isArray(payload.trainingData) || !Array.isArray(payload.history)) return null;
+return payload;
+};
+
+const shrinkImageDataUrl = async (dataUrl, maxDimension = 320) => {
+const image = await loadImageFromDataUrl(dataUrl);
+const largestDimension = Math.max(image.naturalWidth || image.width, image.naturalHeight || image.height);
+if (!largestDimension || largestDimension <= maxDimension) return dataUrl;
+
+const scale = maxDimension / largestDimension;
+const width = Math.max(1, Math.round((image.naturalWidth || image.width) * scale));
+const height = Math.max(1, Math.round((image.naturalHeight || image.height) * scale));
+const canvas = document.createElement("canvas");
+canvas.width = width;
+canvas.height = height;
+const context = canvas.getContext("2d");
+if (!context) return dataUrl;
+context.drawImage(image, 0, 0, width, height);
+return canvas.toDataURL("image/jpeg", 0.78);
+};
+
+const buildCloudPayload = async (snapshot) => {
+const compressedTrainingData = await Promise.all(snapshot.trainingData.map(async (entry) => {
+if (!entry?.image || typeof entry.image !== "string" || !entry.image.startsWith("data:image/")) return entry;
+try {
+const compressedImage = await shrinkImageDataUrl(entry.image);
+return { ...entry, image: compressedImage };
+} catch {
+return entry;
+}
+}));
+
+return {
+version: 1,
+updatedAt: new Date().toISOString(),
+trainingData: compressedTrainingData,
+history: snapshot.history,
+synaxariumCatalog: snapshot.synaxariumCatalog,
+reviewDenials: snapshot.reviewDenials,
+};
 };
 
 const parseModelJson = (text) => {
@@ -963,21 +1004,19 @@ if (cloudSyncTimerRef.current) window.clearTimeout(cloudSyncTimerRef.current);
 
 cloudSyncTimerRef.current = window.setTimeout(async () => {
 try {
+const payload = await buildCloudPayload(nextSnapshot);
 const response = await fetch(CLOUD_SYNC_ENDPOINT, {
 method: "POST",
 headers: { "Content-Type": "application/json" },
-body: JSON.stringify({
-version: 1,
-updatedAt: new Date().toISOString(),
-trainingData: nextSnapshot.trainingData,
-history: nextSnapshot.history,
-synaxariumCatalog: nextSnapshot.synaxariumCatalog,
-reviewDenials: nextSnapshot.reviewDenials,
-}),
+body: JSON.stringify(payload),
 });
 
 if (response.status === 404 || response.status === 503) {
 setCloudSyncStatus("Local archive mode");
+return;
+}
+if (response.status === 413) {
+setCloudSyncStatus("Cloud payload too large");
 return;
 }
 if (!response.ok) throw new Error(`Cloud sync failed: ${response.status}`);
@@ -1073,7 +1112,11 @@ setCloudSyncStatus("Local archive mode");
 }
 } catch (cloudError) {
 console.warn("Could not load cloud snapshot", cloudError);
+if (/not configured|UPSTASH/i.test(cloudError?.message || "")) {
+setCloudSyncStatus("Cloud not configured");
+} else {
 setCloudSyncStatus("Cloud sync unavailable");
+}
 }
 
 const maxExistingId = [...loadedTrainingData, ...loadedHistory]

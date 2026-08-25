@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-25T06:18:37.967Z",
+  "generatedAt": "2026-08-25T06:24:24.758Z",
   "source": "Wikimedia Commons",
   "candidates": [
     {
@@ -4479,6 +4479,17 @@
       "attribution": "Dobroš",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "mary-magdalene-1787638956781-8",
+      "label": "St. Mary Magdalene",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/mary-magdalene/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B6galidskyrkan,_Stockholm_-_statyett_Maria_fr%C3%A5n_Magdala_1.jpg",
+      "attribution": "Atleett",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
     }
   ],
   "skipped": [
@@ -7304,6 +7315,78 @@
     },
     {
       "label": "St. Leontius of Tripoli (Lawendius)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Longinus the Soldier",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Apanoub",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Simeon the First",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Antonius (Anthony) of Beba",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abakragoun",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Domadius El-Souriani (The Syrian)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mercurius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Palamon",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Joseph the Carpentar",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope of Alexanderia",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abba Fam",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Apamon (Abba Amoun)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Ouarshenoufa (Warshenofius)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Apoli",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Kyrillos V (Cyril)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Pa'esa (Athanasia)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Simon (Simeon) the Stylite to the city of Antioch",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Abriamus (Primus)",
       "reason": "No clear licensed icon candidate found"
     }
   ]
