@@ -1053,10 +1053,7 @@ console.error("Could not save denied review candidates", e);
 setError("Could not save denied candidates locally.");
 }
 };
-const loadReviewCandidates = async () => {
-setCollectionImporting(true);
-setError("");
-try {
+const fetchReviewQueueCandidates = async () => {
 const response = await fetch("/synaxarium-icon-review-manifest.json", { cache: "no-store" });
 if (!response.ok) throw new Error("No icon review manifest was found. Download review candidates first.");
 const manifest = await response.json();
@@ -1087,16 +1084,86 @@ mergedDenials
 .map((entry) => entry.sourceUrl || entry.path || "")
 .filter(Boolean),
 );
-setReviewCandidates(manifest.candidates.filter((candidate) => {
+
+return manifest.candidates.filter((candidate) => {
 if (!candidate.path || !candidate.label) return false;
 if (existingSources.has(candidate.path)) return false;
 const sourceKey = candidate.sourceUrl || candidate.path;
 return !deniedSources.has(sourceKey);
-}));
+});
+};
+const loadReviewCandidates = async () => {
+setCollectionImporting(true);
+setError("");
+try {
+setReviewCandidates(await fetchReviewQueueCandidates());
 } catch (e) {
 console.error("Could not load icon review queue", e);
 setError(e.message || "Could not load icon review queue.");
 } finally {
+setCollectionImporting(false);
+}
+};
+const importAllReviewCandidates = async () => {
+setReviewLoading(true);
+setCollectionImporting(true);
+setError("");
+try {
+const queueCandidates = await fetchReviewQueueCandidates();
+if (queueCandidates.length === 0) {
+setReviewCandidates([]);
+throw new Error("No downloaded candidates are ready to import.");
+}
+
+const seenSources = new Set();
+const uniqueCandidates = queueCandidates.filter((candidate) => {
+const key = candidate.sourceUrl || candidate.path;
+if (!key || seenSources.has(key)) return false;
+seenSources.add(key);
+return true;
+});
+
+const importedEntries = [];
+const failedCandidates = [];
+
+for (const candidate of uniqueCandidates) {
+try {
+const response = await fetch(candidate.path);
+if (!response.ok) throw new Error(`Could not read ${candidate.path}`);
+const blob = await response.blob();
+if (!blob.type.startsWith("image/")) throw new Error("Candidate is not a supported image file.");
+const importedImage = await readBlobAsDataUrl(blob);
+await loadImageFromDataUrl(importedImage);
+importedEntries.push({
+id: nextId(),
+name: candidate.label,
+image: importedImage,
+source: candidate.path,
+attribution: candidate.attribution || "Wikimedia Commons",
+license: candidate.license,
+sourceUrl: candidate.sourceUrl,
+});
+} catch {
+failedCandidates.push(candidate);
+}
+}
+
+if (importedEntries.length === 0) {
+setReviewCandidates(failedCandidates);
+throw new Error("No candidates could be imported. Check candidate image files and try again.");
+}
+
+await saveTraining([...trainingData, ...importedEntries]);
+setReviewCandidates(failedCandidates);
+
+if (failedCandidates.length > 0) {
+setError(`Imported ${importedEntries.length} candidate(s). ${failedCandidates.length} candidate(s) could not be imported and remain in the queue.`);
+}
+} catch (e) {
+console.error("Could not import all icon candidates", e);
+setError(e.message || "Could not import all downloaded candidates.");
+} finally {
+setReviewLoading(false);
 setCollectionImporting(false);
 }
 };
@@ -1771,6 +1838,7 @@ onChange={async (e) => { await restoreBackup(e.target.files?.[0]); e.target.valu
 <div className="action-row">
 <button className="btn-gold" onClick={startSynaxariumImageDownload} disabled={downloaderStatus?.running}><Download size={15} /> {downloaderStatus?.running ? "Downloading Synaxarium…" : "Download Synaxarium icons"}</button>
 <button className="btn-ghost" onClick={loadReviewCandidates} disabled={collectionImporting || downloaderStatus?.running}><LibraryBig size={15} /> {collectionImporting ? "Loading review queue…" : "Review downloaded icons"}</button>
+<button className="btn-gold" onClick={importAllReviewCandidates} disabled={reviewLoading || collectionImporting || downloaderStatus?.running}><BadgeCheck size={15} /> {reviewLoading ? "Importing all…" : "Import all to training"}</button>
 </div>
 {reviewDenials.length > 0 && <p className="training-guidance" style={{margin:"12px 0 0"}}>{reviewDenials.length} denied candidate{reviewDenials.length === 1 ? "" : "s"} saved for replacement runs.</p>}
 {downloaderStatus && (

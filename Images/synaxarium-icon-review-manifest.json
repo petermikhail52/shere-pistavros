@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-25T05:31:35.108Z",
+  "generatedAt": "2026-08-25T05:47:44.872Z",
   "source": "Wikimedia Commons",
   "candidates": [
     {
@@ -4171,6 +4171,105 @@
       "attribution": "Thomas Hummel",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "antipas-1787636493093-1",
+      "label": "St. Antipas",
+      "tradition": "Orthodox",
+      "qualityScore": 39,
+      "path": "/icon-review/antipas/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:St_Antipas_Icon_Sinai_13th_century.jpg",
+      "attribution": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "arsenius-1787636509418-1",
+      "label": "St. Arsenius",
+      "tradition": "Orthodox",
+      "qualityScore": 29,
+      "path": "/icon-review/arsenius/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:03557_hires.jpg",
+      "attribution": "from the Middle Ages, unknown",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "helena-1787636785367-1",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/helena/01-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Constantin_and_Helena,_mother_of_Constantine_I_icon,_Syria_(14th_Century).jpg",
+      "attribution": "Saliba Bin Yuhanna",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "helena-1787636789521-2",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/helena/02-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Icon_of_st._Helena_and_st._Konstantin_in_Roudnice_nad_Labem_church.jpg",
+      "attribution": "MKoala",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "helena-1787636795874-3",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/helena/03-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:0102Hb._St._Constantine_the_Great_and_St._Helena_the_Great,_late_19th_-_early_20th_century.jpg",
+      "attribution": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "helena-1787636799304-4",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/helena/04-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Devotional_souvenirs_in_Old_City,_Jerusalem.jpg",
+      "attribution": "Zorro2212 with Barbara Z.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "id": "helena-1787636813873-5",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/helena/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cymbidium_aloifolium_Nepal_(L.)_Sw._in_Nova_Acta_Regiae_Soc._Sci._Upsal.-_ser._2-_6-_73_(1799)_20250412_222856.jpg",
+      "attribution": "Motohiro Sunouchi",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "helena-1787636819721-6",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/helena/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cymbidium_aloifolium_Nepal_(L.)_Sw._in_Nova_Acta_Regiae_Soc._Sci._Upsal.-_ser._2-_6-_73_(1799)_20250412_222950.jpg",
+      "attribution": "Motohiro Sunouchi",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "id": "helena-1787636822841-7",
+      "label": "St. Helena",
+      "tradition": "Orthodox",
+      "qualityScore": 31,
+      "path": "/icon-review/helena/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brosen_icon_constantine_helena.jpg",
+      "attribution": "Brosen",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
     }
   ],
   "skipped": [
@@ -6416,6 +6515,202 @@
     },
     {
       "label": "Anba Macarius the Great and Anba Macarius of Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Kyrellos (Cyril) the Seventy Fifth Pope of Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Shenouda (Sinouti) El Bahnasawy",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sarah the nun",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Helias of Hnes",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Saint Anba Khail (Mikhail) The Forty Six Pope Of The See Of St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Joseph the bishop",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Basilius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sedhom Bishay in Domiat",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Isidore",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Aristobulus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Anba Khail (Mikhail) the Fifty Six Pope of the See of St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Kyrellos (Cyril)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Michael",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Onesiphorous (Friska)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Mattheos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Euphrasia (Eupraxia)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Peter VI",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Domicos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Peter (Petros) VII",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. James the Apostle Brother of St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Gabriel II",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Hepatius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mary of Egypt",
+      "reason": "Commons result was not a supported raster image"
+    },
+    {
+      "label": "St. Macrobius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Zosimus (Zocima)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Sinuthius (Shenouda I) the Fifty Fifth Patriarch",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "st. Theodora",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Antonios",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Yoannis the Seventeenth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Maximus The Fifteenth Pope of Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Alexandra",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Mark (Marcus) VI",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Simeon the Armenian",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Babnuda (Paphnute)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Hierotheos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Isaac (Ishaq)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Alexander I",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mark 11",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Michael 11",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. George Prince of the Martyrs",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Sinuthius (Shenouda I)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sina",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sarah",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sousenyos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Youannis VII",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Boctor Ebn Romanus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Yoannis the Eleventh",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Gabriel the Eighth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Erastus",
       "reason": "No clear licensed icon candidate found"
     }
   ]
