@@ -539,6 +539,7 @@ reviewDenials: "synaxarium_review_denials",
 };
 const MAX_HISTORY = 30;
 const LOCAL_MATCH_THRESHOLD = 0.4;
+const CLOUD_SYNC_ENDPOINT = "/api/training-sync";
 const DATABASE_NAME = "shere-pistavros";
 const DATABASE_STORE = "app-data";
 const COPTIC_SYNXARIUM_URL = "https://www.copticchurch.net/synaxarium/all/en";
@@ -662,6 +663,15 @@ lastError = error;
 }
 }
 throw new Error(errorMessage || lastError?.message || "Request failed");
+};
+
+const fetchCloudSnapshot = async () => {
+    const response = await fetch(CLOUD_SYNC_ENDPOINT, { cache: "no-store" });
+    if (response.status === 404 || response.status === 503) return null;
+    if (!response.ok) throw new Error(`Cloud sync request failed: ${response.status}`);
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.trainingData) || !Array.isArray(payload.history)) return null;
+    return payload;
 };
 
 const parseModelJson = (text) => {
@@ -910,6 +920,7 @@ const [trainImg, setTrainImg] = useState(null);
 const [selectedHistory, setSelectedHistory] = useState(null);
 const [apiKey, setApiKey] = useState("");
 const [identifyEngine, setIdentifyEngine] = useState("local");
+const [cloudSyncStatus, setCloudSyncStatus] = useState("Local archive mode");
 
 const fileRef = useRef();
 const trainFileRef = useRef();
@@ -919,6 +930,8 @@ const streamRef = useRef();
 const storageRef = useRef(getStorageAdapter());
 const idRef = useRef(1);
 const embeddingCacheRef = useRef(new Map());
+const cloudSyncReadyRef = useRef(false);
+const cloudSyncTimerRef = useRef(null);
 const trainingLabelList = useMemo(
 () => trainingData.map((item) => `- "${item.name}"`).join("\n"),
 [trainingData],
@@ -943,6 +956,38 @@ icons: trainingData.length,
 singleSampleSaints,
 };
 }, [trainingData]);
+
+const queueCloudSync = useCallback((nextSnapshot) => {
+if (!cloudSyncReadyRef.current) return;
+if (cloudSyncTimerRef.current) window.clearTimeout(cloudSyncTimerRef.current);
+
+cloudSyncTimerRef.current = window.setTimeout(async () => {
+try {
+const response = await fetch(CLOUD_SYNC_ENDPOINT, {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({
+version: 1,
+updatedAt: new Date().toISOString(),
+trainingData: nextSnapshot.trainingData,
+history: nextSnapshot.history,
+synaxariumCatalog: nextSnapshot.synaxariumCatalog,
+reviewDenials: nextSnapshot.reviewDenials,
+}),
+});
+
+if (response.status === 404 || response.status === 503) {
+setCloudSyncStatus("Local archive mode");
+return;
+}
+if (!response.ok) throw new Error(`Cloud sync failed: ${response.status}`);
+setCloudSyncStatus("Cloud synced");
+} catch (error) {
+console.warn("Cloud sync save failed", error);
+setCloudSyncStatus("Cloud sync unavailable");
+}
+}, 500);
+}, []);
 
 // ── Persist training data & history ──────────────────────────────────────
 useEffect(() => {
@@ -977,13 +1022,17 @@ console.error("Could not load history", e);
 }
 try {
 const catalog = await storage.get(STORAGE_KEYS.synaxariumCatalog);
-if (catalog) setSynaxariumCatalog(parseStoredJson(catalog.value, [], "Synaxarium catalog"));
+if (catalog) {
+setSynaxariumCatalog(parseStoredJson(catalog.value, [], "Synaxarium catalog"));
+}
 } catch (e) {
 console.error("Could not load Synaxarium catalog", e);
 }
 try {
 const denied = await storage.get(STORAGE_KEYS.reviewDenials);
-if (denied) setReviewDenials(parseStoredJson(denied.value, [], "review denials"));
+if (denied) {
+setReviewDenials(parseStoredJson(denied.value, [], "review denials"));
+}
 } catch (e) {
 console.error("Could not load review denials", e);
 }
@@ -996,15 +1045,48 @@ setApiKey(key.value);
 console.error("Could not load API key", e);
 }
 
+try {
+const cloudSnapshot = await fetchCloudSnapshot();
+if (cloudSnapshot) {
+const cloudTraining = Array.isArray(cloudSnapshot.trainingData) ? cloudSnapshot.trainingData : [];
+const cloudHistory = Array.isArray(cloudSnapshot.history) ? cloudSnapshot.history : [];
+const cloudCatalog = Array.isArray(cloudSnapshot.synaxariumCatalog) ? cloudSnapshot.synaxariumCatalog : [];
+const cloudDenials = Array.isArray(cloudSnapshot.reviewDenials) ? cloudSnapshot.reviewDenials : [];
+const cloudLooksRicher = cloudTraining.length > loadedTrainingData.length
+|| (cloudTraining.length === loadedTrainingData.length && cloudHistory.length > loadedHistory.length);
+
+if (cloudLooksRicher) {
+loadedTrainingData = cloudTraining;
+loadedHistory = cloudHistory;
+setTrainingData(cloudTraining);
+setHistory(cloudHistory);
+setSynaxariumCatalog(cloudCatalog);
+setReviewDenials(cloudDenials);
+await storage.set(STORAGE_KEYS.trainingData, JSON.stringify(cloudTraining));
+await storage.set(STORAGE_KEYS.history, JSON.stringify(cloudHistory));
+await storage.set(STORAGE_KEYS.synaxariumCatalog, JSON.stringify(cloudCatalog));
+await storage.set(STORAGE_KEYS.reviewDenials, JSON.stringify(cloudDenials));
+}
+setCloudSyncStatus("Cloud connected");
+} else {
+setCloudSyncStatus("Local archive mode");
+}
+} catch (cloudError) {
+console.warn("Could not load cloud snapshot", cloudError);
+setCloudSyncStatus("Cloud sync unavailable");
+}
+
 const maxExistingId = [...loadedTrainingData, ...loadedHistory]
 .map((item) => Number(item?.id) || 0)
 .reduce((max, value) => Math.max(max, value), 0);
 idRef.current = maxExistingId + 1;
+cloudSyncReadyRef.current = true;
 })();
 }, []);
 
 useEffect(() => {
 return () => {
+if (cloudSyncTimerRef.current) window.clearTimeout(cloudSyncTimerRef.current);
 streamRef.current?.getTracks().forEach((t) => t.stop());
 };
 }, []);
@@ -1038,6 +1120,12 @@ const saveTraining = async (data) => {
 setTrainingData(data);
 try {
 await storageRef.current.set(STORAGE_KEYS.trainingData, JSON.stringify(data));
+queueCloudSync({
+trainingData: data,
+history,
+synaxariumCatalog,
+reviewDenials,
+});
 } catch (e) {
 console.error("Could not persist training data", e);
 setError("Could not save training data locally.");
@@ -1053,6 +1141,12 @@ const saveHistory = async (data) => {
 setHistory(data);
 try {
 await storageRef.current.set(STORAGE_KEYS.history, JSON.stringify(data));
+queueCloudSync({
+trainingData,
+history: data,
+synaxariumCatalog,
+reviewDenials,
+});
 } catch (e) {
 console.error("Could not persist history", e);
 setError("Could not save history locally.");
@@ -1062,6 +1156,12 @@ const saveSynaxariumCatalog = async (data) => {
 setSynaxariumCatalog(data);
 try {
 await storageRef.current.set(STORAGE_KEYS.synaxariumCatalog, JSON.stringify(data));
+queueCloudSync({
+trainingData,
+history,
+synaxariumCatalog: data,
+reviewDenials,
+});
 } catch (e) {
 console.error("Could not save Synaxarium catalog", e);
 setError("Could not save Synaxarium catalog locally.");
@@ -1071,6 +1171,12 @@ const saveReviewDenials = async (data) => {
 setReviewDenials(data);
 try {
 await storageRef.current.set(STORAGE_KEYS.reviewDenials, JSON.stringify(data));
+queueCloudSync({
+trainingData,
+history,
+synaxariumCatalog,
+reviewDenials: data,
+});
 } catch (e) {
 console.error("Could not save denied review candidates", e);
 setError("Could not save denied candidates locally.");
@@ -1732,7 +1838,7 @@ return (
 <p className="crown"><Sparkles size={13} /> Coptic icon archive</p>
 <h1>Shere Pistavros</h1>
 <p className="header-subtitle">Identify, preserve, and explore sacred iconography</p>
-<div className="header-status">Local archive ready</div>
+<div className="header-status">{cloudSyncStatus}</div>
 
 </header>
 

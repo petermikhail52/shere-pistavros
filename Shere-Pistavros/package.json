@@ -13,6 +13,7 @@
     "download:synaxarium-sample": "node scripts/download-synaxarium-icons.mjs --limit 12 --per-saint 8"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.2",
     "lucide-react": "^1.33.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"

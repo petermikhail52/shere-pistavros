@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-25T05:52:11.640Z",
+  "generatedAt": "2026-08-25T06:18:37.967Z",
   "source": "Wikimedia Commons",
   "candidates": [
     {
@@ -4369,6 +4369,116 @@
       "attribution": "Internet Archive Book Images",
       "license": "No restrictions",
       "licenseUrl": "https://www.flickr.com/commons/usage/"
+    },
+    {
+      "id": "john-the-evangelist-1787637245889-1",
+      "label": "St. John The Evangelist",
+      "tradition": "Greek",
+      "qualityScore": 71,
+      "path": "/icon-review/john-the-evangelist/01-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_entrance_-_St_John_the_Evangelist_Cathedral_(33583988588).jpg",
+      "attribution": "Tim Evanson from Cleveland Heights, Ohio, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637249093-2",
+      "label": "St. John The Evangelist",
+      "tradition": "Greek",
+      "qualityScore": 71,
+      "path": "/icon-review/john-the-evangelist/02-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nave_south_wall_02_-_St_John_the_Evangelist_Cathedral_(46546012225).jpg",
+      "attribution": "Tim Evanson from Cleveland Heights, Ohio, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637252239-3",
+      "label": "St. John The Evangelist",
+      "tradition": "Greek",
+      "qualityScore": 71,
+      "path": "/icon-review/john-the-evangelist/03-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crucifix_and_south_entrance_-_St_John_the_Evangelist_Cathedral_(33598558498).jpg",
+      "attribution": "Tim Evanson from Cleveland Heights, Ohio, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637255390-4",
+      "label": "St. John The Evangelist",
+      "tradition": "Greek",
+      "qualityScore": 69,
+      "path": "/icon-review/john-the-evangelist/04-greek.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_aisle_-_St_John_the_Evangelist_Cathedral_(46730362974).jpg",
+      "attribution": "Tim Evanson from Cleveland Heights, Ohio, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637258519-5",
+      "label": "St. John The Evangelist",
+      "tradition": "Orthodox",
+      "qualityScore": 65,
+      "path": "/icon-review/john-the-evangelist/05-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Triptych_of_Madonna_and_Child,_Deesis,_and_St._John_the_Evangelist,_Russia,_16th-17th_century,_inv._40998_-_Pinacoteca_Vaticana_-_Vatican_Museums_-_DSC01229.jpg",
+      "attribution": "Daderot",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "john-the-evangelist-1787637261687-6",
+      "label": "St. John The Evangelist",
+      "tradition": "Orthodox",
+      "qualityScore": 65,
+      "path": "/icon-review/john-the-evangelist/06-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hermitage_hall_143_-_14_-_Icon_with_St_John_the_Evangelist_in_Silence_by_Nektary_Kulyuksin.jpg",
+      "attribution": "Netelo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637264798-7",
+      "label": "St. John The Evangelist",
+      "tradition": "Orthodox",
+      "qualityScore": 37,
+      "path": "/icon-review/john-the-evangelist/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Icon_at_St_Johns_East_Dulwich.jpg",
+      "attribution": "Matthew Black from London, UK",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    },
+    {
+      "id": "john-the-evangelist-1787637268210-8",
+      "label": "St. John The Evangelist",
+      "tradition": "Orthodox",
+      "qualityScore": 35,
+      "path": "/icon-review/john-the-evangelist/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:NMAfA-S20070140(1).jpg",
+      "attribution": "Ethiopian Orthodox",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "id": "george-1787638641591-7",
+      "label": "St. George",
+      "tradition": "Orthodox",
+      "qualityScore": 50,
+      "path": "/icon-review/george/07-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_the_Victory-bearer._Orthodox_icon.jpg",
+      "attribution": "Wikivorker",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "id": "george-1787638645719-8",
+      "label": "St. George",
+      "tradition": "Orthodox",
+      "qualityScore": 48,
+      "path": "/icon-review/george/08-orthodox.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Greek_Orthodox_Church_of_St_George,_Jaffa,_Icon_of_Nativity.jpg",
+      "attribution": "Dobroš",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
   ],
   "skipped": [
@@ -6850,6 +6960,350 @@
     },
     {
       "label": "St. Daniel the Archpriest of Sheahat (Scetis)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Simon the Stylite",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Mark the Seventh",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Julian (Yulianus) and his mother in Alexandria",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Pachomius (Pakhom)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Epimachus (Ephimachus) of Pelusium",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Epiphanius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. George (Ga'orgi)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Isidorus (Isidore) of Antioch",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Ammonius The Hermit",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Andronicus One of the Seventy Disciples",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Colluthus of Antinoe (Known as Abu Colta)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Youannis the Second",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Mikhail the First",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Fournous",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Leontius of Tripoli",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Qozman El-Tahawy and his companions",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abe-Fam (Epipham) the soldier",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. John the Baptist and Elisha the Prophet",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Yoannis the Eighteenth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. George in the cities of Birma and Beer Maa (Water Well) in the Oases",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Martha of Egypt",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Alladius the Bishop",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Shenousi (Sanusi)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Saint Anba Amoun and the Righteous Sophia",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Aba-Hour",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Yoannis the Eighth (80th Patriarch)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. James of the East",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Bshay (Ebsoy) and Anba Botros (Peter)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Boctor (Victor) in the region of Sho",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Yoannis the Nineteenth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abaskhiroun the Soldier",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Tamada and her children",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Claudius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Dabamon",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Yoannis the 16th",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Demitrius the Second",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Kyrillos the Second",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Euphemia",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mark the Apostle by the hand of Pope Paul the Sixth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abba Nofer the Anchorite",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mark to the New St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Latsoun El-Bahnasawy",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Mark Cathedral in the Monastery of Anba Rowais",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Damianos",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Archelaus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. George (Girgis) known as El-Mezahem",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Bishai Anoub",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Timothy of Memphis (El-Masry)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Cedron (Kardonos)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abba Noub the Confessor",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Saint Anba Moses the Black",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Jude",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Peter the Fourth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Ananias",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Thomas of Shentalet",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Sarabamoun",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Abba Hour and his Mother Theodora",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Saint Febronia the Ascetic",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Thaddaeus",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Kyrillos (Cyril) the First",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Celestine",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Aoulimpas",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Theodosia and her companions",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Shenouda (Shenoute)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Anba Bishoy",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Piroou and St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Balanah",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Epime (Pimanon)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Simon Cleophas",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Cladianus (Celadion)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Anba Gabriel VII",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Isaiah",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abba Hour El-Siriakousy",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Pisentius",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Apamon of Toukh",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Abba Shenoute",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Procopius (Proconius) of Jerusalem",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Peter the Fifth",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Ephraem El-Soriani (The Syrian)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Cyriacus and St",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Horesius (Harsios) of Soul",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Pantaleemon",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "Pope Youanis X",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Theodore of Shotep",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Sisinnios (Sosenius)",
+      "reason": "No clear licensed icon candidate found"
+    },
+    {
+      "label": "St. Leontius of Tripoli (Lawendius)",
       "reason": "No clear licensed icon candidate found"
     }
   ]

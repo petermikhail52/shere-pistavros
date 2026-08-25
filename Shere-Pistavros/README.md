@@ -44,6 +44,19 @@ Review the generated `Images/synaxarium-icon-review-manifest.json` before traini
 
 The key, training labels, and history are stored locally in your browser's IndexedDB database. Existing data from older localStorage versions is imported automatically when available.
 
+## Cross-device Cloud Sync (Vercel)
+
+To reuse the same training data on any device, configure Redis for Vercel:
+
+1. Add an Upstash Redis integration to your Vercel project.
+2. In Vercel project environment variables, ensure these exist:
+	- `UPSTASH_REDIS_REST_URL`
+	- `UPSTASH_REDIS_REST_TOKEN`
+3. Optional: set `TRAINING_SYNC_KEY` to isolate your dataset key.
+4. Redeploy.
+
+When configured, the app loads cloud training data at startup and syncs changes automatically through `/api/training-sync`.
+
 ## Scripts
 
 - `npm run dev` - start development server
